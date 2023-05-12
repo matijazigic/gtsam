@@ -87,7 +87,9 @@ include(cmake/HandleGlobalBuildFlags.cmake) # Build flags
 # Add components
 
 # Build CppUnitLite
+if(GTSAM_BUILD_TESTS)
 add_subdirectory(CppUnitLite)
+endif()
 
 # Build GTSAM library
 add_subdirectory(gtsam)
